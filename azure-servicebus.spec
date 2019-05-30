@@ -4,7 +4,7 @@
 #
 Name     : azure-servicebus
 Version  : 0.50.0
-Release  : 4
+Release  : 5
 URL      : https://files.pythonhosted.org/packages/0b/01/509d8474ffb42bf6086bdbeb758239019006020fcf113c46bac38d08eb55/azure-servicebus-0.50.0.zip
 Source0  : https://files.pythonhosted.org/packages/0b/01/509d8474ffb42bf6086bdbeb758239019006020fcf113c46bac38d08eb55/azure-servicebus-0.50.0.zip
 Summary  : Microsoft Azure Service Bus Client Library for Python
@@ -13,14 +13,18 @@ License  : MIT
 Requires: azure-servicebus-python = %{version}-%{release}
 Requires: azure-servicebus-python3 = %{version}-%{release}
 Requires: azure-nspkg
-Requires: futures
 Requires: msrestazure
+BuildRequires : azure-nspkg
 BuildRequires : buildreq-distutils3
 BuildRequires : msrestazure
 
 %description
-Microsoft Azure Service Bus SDK for Python
 ==========================================
+        
+        This is the Microsoft Azure Service Bus Client Library.
+        This package has been tested with Python 2.7, 3.4, 3.5, 3.6 and 3.7.
+        
+        Microsoft Azure Service Bus supports a set of cloud-based, message-oriented middleware technologies including reliable message queuing and durable publish/subscribe messaging.
 
 %package python
 Summary: python components for the azure-servicebus package.
@@ -48,11 +52,17 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1547843871
+export SOURCE_DATE_EPOCH=1559191442
+export GCC_IGNORE_WERROR=1
+export CFLAGS="$CFLAGS -fno-lto "
+export FCFLAGS="$CFLAGS -fno-lto "
+export FFLAGS="$CFLAGS -fno-lto "
+export CXXFLAGS="$CXXFLAGS -fno-lto "
 export MAKEFLAGS=%{?_smp_mflags}
 python3 setup.py build
 
 %install
+export MAKEFLAGS=%{?_smp_mflags}
 rm -rf %{buildroot}
 python3 -tt setup.py build  install --root=%{buildroot}
 echo ----[ mark ]----
