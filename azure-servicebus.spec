@@ -4,7 +4,7 @@
 #
 Name     : azure-servicebus
 Version  : 0.50.0
-Release  : 6
+Release  : 7
 URL      : https://files.pythonhosted.org/packages/0b/01/509d8474ffb42bf6086bdbeb758239019006020fcf113c46bac38d08eb55/azure-servicebus-0.50.0.zip
 Source0  : https://files.pythonhosted.org/packages/0b/01/509d8474ffb42bf6086bdbeb758239019006020fcf113c46bac38d08eb55/azure-servicebus-0.50.0.zip
 Summary  : Microsoft Azure Service Bus Client Library for Python
@@ -15,10 +15,12 @@ Requires: azure-servicebus-python3 = %{version}-%{release}
 Requires: azure-common
 Requires: azure-nspkg
 Requires: msrestazure
+Requires: uamqp
 BuildRequires : azure-common
 BuildRequires : azure-nspkg
 BuildRequires : buildreq-distutils3
 BuildRequires : msrestazure
+BuildRequires : uamqp
 
 %description
 ==========================================
@@ -54,7 +56,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1559969920
+export SOURCE_DATE_EPOCH=1559970946
 export GCC_IGNORE_WERROR=1
 export CFLAGS="$CFLAGS -fno-lto "
 export FCFLAGS="$CFLAGS -fno-lto "
