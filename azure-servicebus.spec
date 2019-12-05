@@ -4,7 +4,7 @@
 #
 Name     : azure-servicebus
 Version  : 0.50.1
-Release  : 9
+Release  : 10
 URL      : https://files.pythonhosted.org/packages/9a/16/edb143195b702f93849862c79fa4ac42c2d004c200a1bbc0e10a6bf5b056/azure-servicebus-0.50.1.zip
 Source0  : https://files.pythonhosted.org/packages/9a/16/edb143195b702f93849862c79fa4ac42c2d004c200a1bbc0e10a6bf5b056/azure-servicebus-0.50.1.zip
 Summary  : Microsoft Azure Service Bus Client Library for Python
