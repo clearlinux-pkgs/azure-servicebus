@@ -1,5 +1,5 @@
 PKG_NAME := azure-servicebus
-URL = https://files.pythonhosted.org/packages/9a/16/edb143195b702f93849862c79fa4ac42c2d004c200a1bbc0e10a6bf5b056/azure-servicebus-0.50.1.zip
+URL = https://files.pythonhosted.org/packages/62/8f/d3b4d435323d4eb2234bde3e128073eccc1a5b86a74e3a8c87624c93155d/azure-servicebus-0.50.2.zip
 ARCHIVES = 
 
 include ../common/Makefile.common
